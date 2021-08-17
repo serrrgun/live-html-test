@@ -1,0 +1,26 @@
+header.header
+  .container
+    .header__wrapper
+      .header__logo
+        +logo()
+      .header__top
+        .header__topmenu
+          .header__btn
+            .header__btn-wrapper
+              span
+              span
+              span  
+          +top-menu()
+          +user()
+        .header__topwrap
+          .header__banner  
+            +banner()
+          .header__basket  
+            +basket()
+          .header__preview  
+            +preview()
+          .header__contacts
+            +contacts()
+    .header__menu
+      +menu()
+      +search()

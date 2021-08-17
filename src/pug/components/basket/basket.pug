@@ -1,0 +1,20 @@
+mixin basket()
+  .basket
+    ul.basket__list 
+      li.basket__item.basket__item--cart 
+        a(href="#").basket__link
+          span 3 
+          | шт. 
+          span.basket__link-separator /  
+          span 17 250 
+          | p.
+      li.basket__item.basket__item--fav 
+        a(href="#").basket__link
+          | Избранное (
+          span 7
+          | )
+      li.basket__item.basket__item--balance
+        a(href="#").basket__link
+          | К сравнению (
+          span 5
+          | )

@@ -1,0 +1,65 @@
+.user {
+  position: relative;
+  display: flex;
+
+  @media screen and (max-width: 1090px) {
+    order: 1;
+  }
+
+  &__link {
+    font-size: 12px;
+    color: #252525;
+    transition: color .3s;
+
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  &__separator {
+    margin: 0 12px;
+    font-size: 12px;
+  }
+
+  &__wrapper {
+    @media screen and (max-width: 1090px) {
+      position: absolute;
+      display: flex;
+      bottom: -60px;
+      left: -120px;
+      padding: 10px;
+      background-color: #ffcc00;
+      opacity: 0;
+      transition: .5s;
+      //display: none;
+    }
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    @media screen and (max-width: 1090px) {
+      display: block;
+    }
+
+    &:focus + .user__wrapper {
+      bottom: -45px;
+      opacity: 1;
+    } 
+
+    &-icon {
+      width: 20px;
+      transition: .3s;
+
+      @media screen and (max-width: $smDesktopWidth) {
+        width: 30px;
+      }
+
+      &:hover {
+        fill: #ffcc00;
+      }
+    }
+  }
+}

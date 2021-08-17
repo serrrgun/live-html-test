@@ -1,0 +1,52 @@
+.top-menu {
+
+  &__list {
+    display: flex;
+
+    @media screen and (max-width: $smDesktopWidth) {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #252525;
+    transition: .3s;
+
+    &:hover {
+      color: #ffcc00;
+    }
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 320px;
+    background-color: #fff;
+    z-index: 1;
+    transition: .3s ease-in;
+    transform: translateX(100%);
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    width: 100%;
+  }
+
+  &--open {
+    @media screen and (max-width: $smDesktopWidth) {
+      transform: translateX(0);
+    }
+  }
+}
